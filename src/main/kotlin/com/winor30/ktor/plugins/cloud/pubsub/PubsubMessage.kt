@@ -1,7 +1,7 @@
 package com.winor30.ktor.plugins.cloud.pubsub
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import java.util.*
+import java.util.Base64
 
 data class PubsubMessage<T>(val message: Message) {
 

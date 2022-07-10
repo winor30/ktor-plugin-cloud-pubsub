@@ -9,7 +9,6 @@ import io.ktor.server.request.ApplicationReceivePipeline
 import io.ktor.util.AttributeKey
 import io.ktor.utils.io.ByteReadChannel
 import io.ktor.utils.io.readUTF8Line
-import java.util.Base64
 
 class PubsubPushMessageTransformationPlugin<T : Any> :
   BaseRouteScopedPlugin<Configuration, PubsubPushMessageTransformationPlugin<T>> {
