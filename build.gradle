@@ -29,6 +29,17 @@ compileTestKotlin {
 }
 
 publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.winor30'
+            artifactId = 'ktor-plugin-cloud-pubsub'
+            version = '0.0.1'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
     repositories {
         maven {
             name = "GitHubPackages"
