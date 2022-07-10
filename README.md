@@ -1,5 +1,4 @@
 # Ktor Plugin Cloud Pub/Sub
-====
 
 A ktor plugin that Cloud Pub/Sub's push trigger messages into a defined type
 
