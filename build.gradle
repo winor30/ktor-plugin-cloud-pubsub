@@ -33,17 +33,23 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.winor30'
             artifactId = 'ktor-plugin-cloud-pubsub'
-            version = '0.0.1'
+            version = '0.0.2'
+            from(components["java"])
 
-            afterEvaluate {
-                from components.release
+            pom {
+                url = 'https://github.com/winor30/ktor-plugin-cloud-pubsub'
+                licenses {
+                    license {
+                        name = 'MIT'
+                    }
+                }
             }
         }
     }
     repositories {
         maven {
             name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/winor30/ktor-server-cloud-pubsub-plugin"
+            url = "https://maven.pkg.github.com/winor30/ktor-plugin-cloud-pubsub"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
