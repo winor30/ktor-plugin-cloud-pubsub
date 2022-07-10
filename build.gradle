@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.winor30.ktor.plugins.cloud.pubsub'
+group = 'com.winor30'
 version = '1.0-SNAPSHOT'
 
 repositories {
