@@ -1,4 +1,4 @@
-package com.winor.ktor.plugins.cloud.pubsub
+package com.winor30.ktor.plugins.cloud.pubsub
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue

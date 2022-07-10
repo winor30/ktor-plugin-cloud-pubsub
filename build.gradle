@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.winor'
+group = 'com.winor30.ktor.plugins.cloud.pubsub'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -31,11 +31,11 @@ compileTestKotlin {
 publishing {
     repositories {
         maven {
-            name = "OSSRH"
+            name = "GitHubPackages"
             url = "https://maven.pkg.github.com/winor30/ktor-server-cloud-pubsub-plugin"
             credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
