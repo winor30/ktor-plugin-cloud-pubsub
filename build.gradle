@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.7.0'
     id 'maven-publish'
+    id 'signing'
 }
 
 group = 'com.winor30'
@@ -46,7 +47,16 @@ publishing {
             }
         }
     }
+
     repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
         maven {
             name = "GitHubPackages"
             url = "https://maven.pkg.github.com/winor30/ktor-plugin-cloud-pubsub"
@@ -56,4 +66,8 @@ publishing {
             }
         }
     }
+}
+
+signing {
+    sign(publishing.publications["release"])
 }
