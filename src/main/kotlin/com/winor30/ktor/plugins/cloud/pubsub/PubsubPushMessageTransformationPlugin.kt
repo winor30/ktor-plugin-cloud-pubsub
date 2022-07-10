@@ -10,6 +10,10 @@ import io.ktor.util.AttributeKey
 import io.ktor.utils.io.ByteReadChannel
 import io.ktor.utils.io.readUTF8Line
 
+/**
+ * Ktor plugin class that Cloud Pub/Sub's push trigger messages into a defined type
+ * @param T Type Arguments for Decode Destination
+ */
 class PubsubPushMessageTransformationPlugin<T : Any> :
   BaseRouteScopedPlugin<Configuration, PubsubPushMessageTransformationPlugin<T>> {
 
