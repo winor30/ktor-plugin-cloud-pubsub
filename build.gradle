@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.winor30'
-version = '1.0-SNAPSHOT'
+version = '0.0.3'
 
 repositories {
     mavenCentral()
@@ -46,7 +46,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.winor30'
             artifactId = 'ktor-plugin-cloud-pubsub'
-            version = '0.0.2'
+            version = '0.0.3'
             from(components["java"])
 
             pom {
