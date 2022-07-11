@@ -1,5 +1,6 @@
 package com.winor30.ktor.plugins.cloud.pubsub
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.util.Base64
 
@@ -8,6 +9,7 @@ import java.util.Base64
  * @param message The message data.
  * @param T Type Arguments for Decode Destination
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class PubsubMessage<T>(val message: Message) {
 
   companion object {
@@ -20,6 +22,7 @@ data class PubsubMessage<T>(val message: Message) {
    * @param publishTime publish time
    * @param data the main data published by Publisher. It is also in Base64-encoded format.
    */
+  @JsonIgnoreProperties(ignoreUnknown = true)
   data class Message(val messageId: String, val publishTime: String, val data: String)
 
   /**
