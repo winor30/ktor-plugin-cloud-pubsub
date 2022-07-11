@@ -80,16 +80,16 @@ publishing {
             name = "OSSRH"
             url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
+                username = "${sonatypeUsername}"
+                password = "${sonatypePassword}"
             }
         }
         maven {
             name = "GitHubPackages"
             url = "https://maven.pkg.github.com/winor30/ktor-plugin-cloud-pubsub"
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = "${githubUsername}"
+                password = "${githubPassword}"
             }
         }
     }
