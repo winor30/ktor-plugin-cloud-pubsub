@@ -49,7 +49,7 @@ data class DecodedPublishedMessage(
 
 ```groovy
 dependencies {
-    implementation 'com.winor30:ktor-plugin-cloud-pubsub:0.0.2'
+    implementation 'com.winor30:ktor-plugin-cloud-pubsub:0.0.3'
 }
 ```
 
